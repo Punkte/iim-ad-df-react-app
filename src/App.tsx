@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-type TodoItem = {
+export type TodoItem = {
   completed: boolean;
   id: number;
   title: string;
