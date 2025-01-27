@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import { Link } from 'react-router';
 
 export type TodoItem = {
   completed: boolean;
@@ -21,7 +22,7 @@ function App() {
     <> 
     {state === null ? <div>loading....</div> : state.map(element => {
       return <ul key={element.id}>
-        <li>{element.title}</li>
+        <li><Link to={`/${element.id}`}>{element.title}</Link></li>
       </ul>
     })}
     </>
